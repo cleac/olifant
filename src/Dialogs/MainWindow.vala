@@ -106,7 +106,7 @@ public class Tootle.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
 
     public MainWindow (Gtk.Application _app) {
         application = _app;
-        icon_name = "me.cleac.tootle";
+        icon_name = "com.github.cleac.tootle";
         resizable = true;
         window_position = WindowPosition.CENTER;
         set_titlebar (header);

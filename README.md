@@ -6,8 +6,8 @@ A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for e
 
 ## Building and Installation
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/me.cleac.tootle)
-<a href='https://flathub.org/apps/details/me.cleac.tootle'><img height='51' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cleac.tootle)
+<a href='https://flathub.org/apps/details/com.github.cleac.tootle'><img height='51' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
 First of all you'll need some dependencies to build and run the app:
 * meson
@@ -22,7 +22,7 @@ Then run these commands to build and install it:
     meson build --prefix=/usr
     cd build
     sudo ninja install
-    me.cleac.tootle
+    com.github.cleac.tootle
     
 ## Contributing
 

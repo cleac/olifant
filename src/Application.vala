@@ -35,7 +35,7 @@ namespace Tootle {
         };
 
         construct {
-            application_id = "me.cleac.tootle";
+            application_id = "com.github.cleac.tootle";
             flags = ApplicationFlags.FLAGS_NONE;
             program_name = "Tootle";
             build_version = "0.2.1";

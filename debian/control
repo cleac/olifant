@@ -1,4 +1,4 @@
-Source: me.cleac.tootle
+Source: com.github.cleac.tootle
 Section: x11
 Priority: optional
 Maintainer: Alex Cleac <alexcleac@posteo.net>
@@ -13,7 +13,7 @@ Build-Depends: meson,
                libjson-glib-dev
 Standards-Version: 4.1.5
 
-Package: me.cleac.tootle
+Package: com.github.cleac.tootle
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Mastodon client

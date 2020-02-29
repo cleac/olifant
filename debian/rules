@@ -19,4 +19,4 @@ override_dh_auto_test:
 	cd debian/build && ninja test
 
 override_dh_auto_install:
-	cd debian/build && DESTDIR=${CURDIR}/debian/me.cleac.tootle ninja install
+	cd debian/build && DESTDIR=${CURDIR}/debian/com.github.cleac.tootle ninja install

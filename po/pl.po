@@ -1,11 +1,11 @@
 # Polish translation of Tootle.
 # Copyright (C) 2018 Tootle
-# This file is distributed under the same license as the me.cleac.tootle package.
+# This file is distributed under the same license as the com.github.cleac.tootle package.
 # Marcin Mikołajczak <me@m4sk.in>, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: me.cleac.tootle\n"
+"Project-Id-Version: com.github.cleac.tootle\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-30 19:17+0300\n"
 "PO-Revision-Date: 2018-11-01 12:20+0100\n"
@@ -17,29 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.1.1\n"
 
-#: data/me.cleac.tootle.desktop.in:4
-#: data/me.cleac.tootle.appdata.xml.in:7 src/MainWindow.vala:68
+#: data/com.github.cleac.tootle.desktop.in:4
+#: data/com.github.cleac.tootle.appdata.xml.in:7 src/MainWindow.vala:68
 msgid "Tootle"
 msgstr "Tootle"
 
-#: data/me.cleac.tootle.desktop.in:5
-#: data/me.cleac.tootle.desktop.in:6
+#: data/com.github.cleac.tootle.desktop.in:5
+#: data/com.github.cleac.tootle.desktop.in:6
 msgid "Mastodon Client"
 msgstr "Klient Mastodona"
 
-#: data/me.cleac.tootle.desktop.in:8
-msgid "me.cleac.tootle"
-msgstr "me.cleac.tootle"
+#: data/com.github.cleac.tootle.desktop.in:8
+msgid "com.github.cleac.tootle"
+msgstr "com.github.cleac.tootle"
 
-#: data/me.cleac.tootle.desktop.in:11
+#: data/com.github.cleac.tootle.desktop.in:11
 msgid "toot;mastodon;social;network;post;"
 msgstr "toot;mastodon;social;network;post;"
 
-#: data/me.cleac.tootle.appdata.xml.in:8
+#: data/com.github.cleac.tootle.appdata.xml.in:8
 msgid "Lightning fast client for Mastodon"
 msgstr "Klient Mastodona szybki jak błyskawica"
 
-#: data/me.cleac.tootle.appdata.xml.in:11
+#: data/com.github.cleac.tootle.appdata.xml.in:11
 msgid ""
 "Tootle is a client for the world’s largest free, open-source, decentralized "
 "microblogging network with real-time notifications and multiple accounts "
@@ -49,7 +49,7 @@ msgstr ""
 "zdecentralizowanej sieci społecznościowej obsługującym powiadomienia w "
 "czasie rzeczywistym i wiele kont jednocześnie."
 
-#: data/me.cleac.tootle.appdata.xml.in:14
+#: data/com.github.cleac.tootle.appdata.xml.in:14
 msgid ""
 "Mastodon is lovely crafted with power and speed in mind, resulting in a "
 "free, independent and popular alternative to the centralized social networks."
@@ -58,7 +58,7 @@ msgstr ""
 "wyniku czego powstałą wolna, niezależna i popularna alternatywa dla "
 "scentralizowanych sieci społecznościowych."
 
-#: data/me.cleac.tootle.appdata.xml.in:17
+#: data/com.github.cleac.tootle.appdata.xml.in:17
 msgid ""
 "Anyone can run a server of Mastodon. Each server hosts individual user "
 "accounts, the content they produce, and the content they are subscribed. "
@@ -70,7 +70,7 @@ msgstr ""
 "Każdy użytkownik może zaobserwować innych i udostępniać ich wpisy "
 "niezależnie od używanego przez nich serwera."
 
-#: data/me.cleac.tootle.appdata.xml.in:26
+#: data/com.github.cleac.tootle.appdata.xml.in:26
 msgid "bleak_grey"
 msgstr "bleak_grey"
 

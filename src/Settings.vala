@@ -18,7 +18,7 @@ public class Tootle.Settings : Granite.Services.Settings {
     public int window_h { get; set; }
 
     public Settings () {
-        base ("me.cleac.tootle");
+        base ("com.github.cleac.tootle");
     }
 
 }
