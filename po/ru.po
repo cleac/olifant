@@ -1,11 +1,11 @@
-# Russian translations for com.github.bleakgrey.tootle package.
-# Copyright (C) 2018 THE com.github.bleakgrey.tootle'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.bleakgrey.tootle package.
+# Russian translations for me.cleac.tootle package.
+# Copyright (C) 2018 THE me.cleac.tootle'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the me.cleac.tootle package.
 # Automatically generated, 2018.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.bleakgrey.tootle\n"
+"Project-Id-Version: me.cleac.tootle\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-30 19:17+0300\n"
 "PO-Revision-Date: 2018-05-10 00:35+0300\n"
@@ -18,29 +18,29 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: data/com.github.bleakgrey.tootle.desktop.in:4
-#: data/com.github.bleakgrey.tootle.appdata.xml.in:7 src/MainWindow.vala:68
+#: data/me.cleac.tootle.desktop.in:4
+#: data/me.cleac.tootle.appdata.xml.in:7 src/MainWindow.vala:68
 msgid "Tootle"
 msgstr ""
 
-#: data/com.github.bleakgrey.tootle.desktop.in:5
-#: data/com.github.bleakgrey.tootle.desktop.in:6
+#: data/me.cleac.tootle.desktop.in:5
+#: data/me.cleac.tootle.desktop.in:6
 msgid "Mastodon Client"
 msgstr "Клиент для Мастодонта"
 
-#: data/com.github.bleakgrey.tootle.desktop.in:8
-msgid "com.github.bleakgrey.tootle"
+#: data/me.cleac.tootle.desktop.in:8
+msgid "me.cleac.tootle"
 msgstr ""
 
-#: data/com.github.bleakgrey.tootle.desktop.in:11
+#: data/me.cleac.tootle.desktop.in:11
 msgid "toot;mastodon;social;network;post;"
 msgstr "пост;mastodon;мастодонт;социальные;сеть;статус;"
 
-#: data/com.github.bleakgrey.tootle.appdata.xml.in:8
+#: data/me.cleac.tootle.appdata.xml.in:8
 msgid "Lightning fast client for Mastodon"
 msgstr "Молниеносный клиент для Мастодонта"
 
-#: data/com.github.bleakgrey.tootle.appdata.xml.in:11
+#: data/me.cleac.tootle.appdata.xml.in:11
 msgid ""
 "Tootle is a client for the world’s largest free, open-source, decentralized "
 "microblogging network with real-time notifications and multiple accounts "
@@ -50,7 +50,7 @@ msgstr ""
 "микроблогинга с открытым исходным кодом. Он поддерживает уведомления в "
 "реальном времени и несколько рабочих аккаунтов."
 
-#: data/com.github.bleakgrey.tootle.appdata.xml.in:14
+#: data/me.cleac.tootle.appdata.xml.in:14
 msgid ""
 "Mastodon is lovely crafted with power and speed in mind, resulting in a "
 "free, independent and popular alternative to the centralized social networks."
@@ -59,7 +59,7 @@ msgstr ""
 "к созданию свободной альтернативы популярным централизованным социальным "
 "сетям."
 
-#: data/com.github.bleakgrey.tootle.appdata.xml.in:17
+#: data/me.cleac.tootle.appdata.xml.in:17
 msgid ""
 "Anyone can run a server of Mastodon. Each server hosts individual user "
 "accounts, the content they produce, and the content they are subscribed. "
@@ -71,7 +71,7 @@ msgstr ""
 "подписаны. Пользователи могут подписываться друг на друга и делиться "
 "статусами вне зависимости от того, на каком сервере они расположены."
 
-#: data/com.github.bleakgrey.tootle.appdata.xml.in:26
+#: data/me.cleac.tootle.appdata.xml.in:26
 msgid "bleak_grey"
 msgstr ""
 

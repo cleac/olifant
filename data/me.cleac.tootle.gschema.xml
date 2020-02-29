@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema path="/com/github/bleakgrey/tootle/" id="com.github.bleakgrey.tootle" gettext-domain="com.github.bleakgrey.tootle">
+	<schema path="/me/cleac/tootle/" id="me.cleac.tootle" gettext-domain="me.cleac.tootle">
 		<key name="current-account" type="i">
 			<default>0</default>
 			<summary>Current Account</summary>

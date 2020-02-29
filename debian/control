@@ -1,7 +1,7 @@
-Source: com.github.bleakgrey.tootle
+Source: me.cleac.tootle
 Section: x11
 Priority: optional
-Maintainer: bleak_grey <bleakgrey@gmail.com>
+Maintainer: Alex Cleac <alexcleac@posteo.net>
 Build-Depends: meson,
                valac (>= 0.26),
                debhelper (>= 11),
@@ -13,7 +13,7 @@ Build-Depends: meson,
                libjson-glib-dev
 Standards-Version: 4.1.5
 
-Package: com.github.bleakgrey.tootle
+Package: me.cleac.tootle
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Mastodon client

@@ -27,7 +27,7 @@ public class Tootle.Dialogs.NewAccount : Dialog {
         title = _("New Account");
         transient_for = window;
 
-        logo = new Image.from_resource ("/com/github/bleakgrey/tootle/logo128");
+        logo = new Image.from_resource ("/me/cleac/tootle/logo128");
         logo.halign = Align.CENTER;
         logo.hexpand = true;
         logo.margin_bottom = 24;
@@ -118,9 +118,9 @@ public class Tootle.Dialogs.NewAccount : Dialog {
     }
 
     private void request_client_tokens (){
-        var pars = "?client_name=Tootle";
+        var pars = "?client_name=Tootle%20Fork";
         pars += "&redirect_uris=urn:ietf:wg:oauth:2.0:oob";
-        pars += "&website=https://github.com/bleakgrey/tootle";
+        pars += "&website=https://github.com/cleac/tootle";
         pars += "&scopes=read%20write%20follow";
 
         grid.sensitive = false;

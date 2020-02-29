@@ -1,4 +1,4 @@
-project('com.github.bleakgrey.tootle', 'vala', 'c')
+project('me.cleac.tootle', 'vala', 'c')
 
 gnome = import('gnome')
 i18n = import('i18n')
