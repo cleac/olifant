@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Tootle [Fork]
+Comment=Mastodon Client
+GenericName=Mastodon Client
+Exec=com.github.cleac.tootle
+Icon=com.github.cleac.tootle
+Terminal=false
+Categories=GNOME;GTK;Network;
+Keywords=toot;mastodon;social;network;post;
+X-GNOME-Gettext-Domain=com.github.cleac.tootle
+X-GNOME-UsesNotifications=true
