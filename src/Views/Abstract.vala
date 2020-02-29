@@ -55,7 +55,7 @@ public abstract class Tootle.Views.Abstract : ScrolledWindow {
 
         empty = new Box (Orientation.VERTICAL, 0);
         empty.margin = 64;
-        var image = new Image.from_resource ("/com/github/bleakgrey/tootle/empty_state");
+        var image = new Image.from_resource ("/me/cleac/tootle/empty_state");
         var text = new Label (_("Nothing to see here"));
         text.get_style_context ().add_class ("h2");
         text.opacity = 0.5;

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2020 Alex Cleac <alexcleac@posteo.net> -->
 <!-- Copyright 2018 bleak_grey <bleakgrey@gmail.com> -->
 <component type="desktop">
-  <id>com.github.bleakgrey.tootle</id>
+  <id>me.cleac.tootle</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Tootle</name>
@@ -20,13 +21,12 @@
   </description>
   
   <provides>
-    <binary>com.github.bleakgrey.tootle</binary>
+    <binary>me.cleac.tootle</binary>
   </provides>
   
-  <developer_name>bleak_grey</developer_name>
-  <url type="homepage">https://github.com/bleakgrey</url>
-  <url type="bugtracker">https://github.com/bleakgrey/tootle/issues</url>
-  <url type="donation">https://liberapay.com/bleakgrey/donate</url>
+  <developer_name>alexcleac</developer_name>
+  <url type="homepage">https://github.com/cleac/tootle</url>
+  <url type="bugtracker">https://github.com/cleac/tootle/issues</url>
   
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -60,20 +60,28 @@
   
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/bleakgrey/tootle/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/bleakgrey/tootle/master/data/screenshot2.png</image>
+      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot2.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/bleakgrey/tootle/master/data/screenshot3.png</image>
+      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot3.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/bleakgrey/tootle/master/data/screenshot4.png</image>
+      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot4.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="0.2.1-beta" date="2020-02-29">
+        <description>
+           <ul>
+              <li>Fixed crash, when a poll notification arrives</li>
+              <li>Forked a project</li>
+          </ul>
+        </description>
+      </release>
     <release version="0.2.0" date="2018-10-31">
         <description>
            <ul>
