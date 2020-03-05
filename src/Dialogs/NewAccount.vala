@@ -10,6 +10,7 @@ public class Tootle.Dialogs.NewAccount : Dialog {
     private Entry instance_entry;
     private Label instance_register;
     private Label code_name;
+    private Label url_hint;
     private Entry code_entry;
 
     private string? instance;
@@ -19,6 +20,8 @@ public class Tootle.Dialogs.NewAccount : Dialog {
     private string? token;
     private string? username;
     private int64? instance_status_char_limit;
+
+    private const int64 DEFAULT_INSTANCE_STATUS_CHAR_LIMIT = 500;
 
     public NewAccount () {
         border_width = 6;
@@ -51,6 +54,10 @@ public class Tootle.Dialogs.NewAccount : Dialog {
         button_done.halign = Align.END;
         button_done.margin_top = 24;
 
+        url_hint = new Label("test");
+        url_hint.halign = Align.END;
+        url_hint.set_use_markup (true);
+
         grid = new Grid ();
         grid.column_spacing = 12;
         grid.row_spacing = 6;
@@ -61,6 +68,7 @@ public class Tootle.Dialogs.NewAccount : Dialog {
         grid.attach (instance_entry, 1, 1);
         grid.attach (code_name, 0, 3);
         grid.attach (code_entry, 1, 3);
+        grid.attach (url_hint, 1, 4);
         grid.attach (instance_register, 1, 5);
         grid.attach (button_done, 1, 10);
 
@@ -81,6 +89,7 @@ public class Tootle.Dialogs.NewAccount : Dialog {
     private void clear () {
         code_name.hide ();
         code_entry.hide ();
+        url_hint.hide ();
         code_entry.text = "";
         client_id = client_secret = code = token = null;
     }
@@ -111,9 +120,15 @@ public class Tootle.Dialogs.NewAccount : Dialog {
         network.queue(instance_query, (sess, msg) => {
             var root = network.parse (msg);
             instance_status_char_limit = root.get_int_member ("max_toot_chars");
-            info ("Got new instance status character limit: %s".printf(instance_status_char_limit.to_string()));
+            if (instance_status_char_limit > 0) {
+                info ("Got new instance status character limit: %s".printf(instance_status_char_limit.to_string()));
+            } else {
+                instance_status_char_limit = DEFAULT_INSTANCE_STATUS_CHAR_LIMIT;
+                warning ("Could not determine maximum status length, falling back to 500");
+            }
         }, (_, __) => {
-            warning ("Could not determine maximum status length, falling back to settings");
+            instance_status_char_limit = DEFAULT_INSTANCE_STATUS_CHAR_LIMIT;
+            warning ("Could not determine maximum status length, falling back to 500");
         });
     }
 
@@ -138,19 +153,25 @@ public class Tootle.Dialogs.NewAccount : Dialog {
             request_auth_code ();
             code_name.show ();
             code_entry.show ();
+            url_hint.show ();
+            url_hint.set_markup ("Browser did not open? Try <a href=\"%s\">link</a>".printf (GLib.Markup.escape_text (generate_auth_url ())));
         }, (status, reason) => {
             network.on_show_error (status, reason);
         });
     }
 
-    private void request_auth_code (){
+    private string generate_auth_url () {
         var pars = "?scope=read%20write%20follow";
         pars += "&response_type=code";
         pars += "&redirect_uri=urn:ietf:wg:oauth:2.0:oob";
         pars += "&client_id=" + client_id;
 
+        return "%s/oauth/authorize%s".printf (instance, pars);
+    }
+
+    private void request_auth_code (){
         info ("Requesting auth token");
-        Desktop.open_uri ("%s/oauth/authorize%s".printf (instance, pars));
+        Desktop.open_uri (generate_auth_url ());
     }
 
     private void try_auth (string code){
