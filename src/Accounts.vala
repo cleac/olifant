@@ -34,7 +34,6 @@ public class Tootle.Accounts : Object {
 
         info ("Getting information from %s", accounts.formal.instance);
         msg = new Soup.Message ("GET", "%s/api/v1/instance".printf (accounts.formal.instance));
-        network.inject (msg, Network.INJECT_TOKEN);
         network.queue (msg, (sess, mess) => {
                 var root = network.parse (mess);
                 currentInstance = API.Instance.parse (root);
