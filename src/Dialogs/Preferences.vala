@@ -56,6 +56,7 @@ public class Olifant.Dialogs.Preferences : Dialog {
         grid.attach (switch_notifications, 1, i++);
         grid.attach (new SettingsLabel (_("Always receive notifications:")), 0, i);
         grid.attach (switch_watcher, 1, i++);
+
         grid.attach (new SettingsLabel (_("Clear notifications:")), 0, i);
         var cleanNotifications=new Button.with_label (_("Clear"));
         cleanNotifications.clicked.connect (() => {
