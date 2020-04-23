@@ -11,6 +11,7 @@ public class Tootle.Accounts : Object {
     public GenericArray<InstanceAccount> saved_accounts = new GenericArray<InstanceAccount> ();
     public InstanceAccount? formal {get; set;}
     public API.Account? current {get; set;}
+    public API.Instance? currentInstance {get; set;}
 
     public Accounts () {
         dir_path = "%s/%s".printf (GLib.Environment.get_user_config_dir (), app.application_id);
@@ -28,6 +29,14 @@ public class Tootle.Accounts : Object {
                 current = API.Account.parse (root);
                 switched (current);
                 updated (saved_accounts);
+            },
+            network.on_show_error);
+
+        info ("Getting information from %s", accounts.formal.instance);
+        msg = new Soup.Message ("GET", "%s/api/v1/instance".printf (accounts.formal.instance));
+        network.queue (msg, (sess, mess) => {
+                var root = network.parse (mess);
+                currentInstance = API.Instance.parse (root);
             },
             network.on_show_error);
     }
