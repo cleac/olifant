@@ -69,6 +69,18 @@ public class Tootle.Views.Timeline : Views.Abstract {
             view.reorder_child (widget, new_index);
         }
     }
+    public void append_not (API.Notification not, bool first = false){
+        if (empty != null)
+            empty.destroy ();
+
+        var separator = new Separator (Orientation.HORIZONTAL);
+        separator.show ();
+
+        var widget = new Widgets.Notification (not);
+        widget.separator = separator;
+        view.pack_start (separator, false, false, 0);
+        view.pack_start (widget, false, false, 0);
+    }
 
     public override void clear () {
         this.page_prev = null;
@@ -106,6 +118,14 @@ public class Tootle.Views.Timeline : Views.Abstract {
         url += this.pars;
         return url;
     }
+    public virtual string get_url_status () {
+        if (page_next != null)
+            return page_next;
+
+        var url = "%s/api/v1/notifications?exclude_types[]=favourite&exclude_types[]=reblog&exclude_types[]=follow&exclude_types[]=poll&limit=%i".printf (accounts.formal.instance,this.limit);
+        url += this.pars;
+        return url;
+    }
 
     public virtual void request (){
         if (accounts.current == null) {
@@ -114,13 +134,22 @@ public class Tootle.Views.Timeline : Views.Abstract {
         }
 
         var msg = new Soup.Message ("GET", get_url ());
+        if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
+            msg = new Soup.Message ("GET", get_url_status ());
+        }
         network.inject (msg, Network.INJECT_TOKEN);
         network.queue (msg, (sess, mess) => {
+                var mensaje=msg;
                 network.parse_array (mess).foreach_element ((array, i, node) => {
                     var object = node.get_object ();
                     if (object != null) {
-                        var status = API.Status.parse (object);
-                        append (status);
+                        if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
+                            var nots = API.Notification.parse(object);
+                            append(nots.status);
+                        } else{
+                            var status = API.Status.parse (object);
+                            append (status);
+                        }
                     }
                 });
                 get_pages (mess.response_headers.get_one ("Link"));
