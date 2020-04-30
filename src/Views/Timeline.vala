@@ -145,7 +145,9 @@ public class Tootle.Views.Timeline : Views.Abstract {
                     if (object != null) {
                         if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
                             var nots = API.Notification.parse(object);
-                            append(nots.status);
+                            if (nots.status.visibility==API.StatusVisibility.DIRECT){
+                                append(nots.status);
+                            }
                         } else{
                             var status = API.Status.parse (object);
                             append (status);
