@@ -140,7 +140,6 @@ public class Tootle.Views.Timeline : Views.Abstract {
         var msg = new Soup.Message ("GET", get_url ());
         network.inject (msg, Network.INJECT_TOKEN);
         network.queue (msg, (sess, mess) => {
-                var mensaje=msg;
                 network.parse_array (mess).foreach_element ((array, i, node) => {
                     process_response(node.get_object ());
                 });
