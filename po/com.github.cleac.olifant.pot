@@ -201,11 +201,11 @@ msgstr ""
 #: src/Dialogs/Preferences.vala:63 src/Dialogs/WatchlistEditor.vala:162
 =======
 #: src/Dialogs/Preferences.vala:59
-msgid "Clean notifications:"
+msgid "Clear notifications:"
 msgstr ""
 
 #: src/Dialogs/Preferences.vala:60
-msgid "Clean"
+msgid "Clear"
 msgstr ""
 
 #: src/Dialogs/Preferences.vala:78 src/Dialogs/WatchlistEditor.vala:162

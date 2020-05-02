@@ -56,9 +56,17 @@ public class Olifant.Dialogs.Preferences : Dialog {
         grid.attach (switch_notifications, 1, i++);
         grid.attach (new SettingsLabel (_("Always receive notifications:")), 0, i);
         grid.attach (switch_watcher, 1, i++);
+<<<<<<< HEAD
 
         grid.attach (new SettingsLabel (_("Clear notifications:")), 0, i);
         var cleanNotifications=new Button.with_label (_("Clear"));
+||||||| merged common ancestors
+        grid.attach (new SettingsLabel (_("Clean notifications:")), 0, i);
+        var cleanNotifications=new Button.with_label (_("Clean"));
+=======
+        grid.attach (new SettingsLabel (_("Clear notifications:")), 0, i);
+        var cleanNotifications=new Button.with_label (_("Clear"));
+>>>>>>> Changed name of action
         cleanNotifications.clicked.connect (() => {
             var url = "%s/api/v1/notifications/clear".printf (accounts.formal.instance);
             var msg = new Soup.Message ("POST", url);
