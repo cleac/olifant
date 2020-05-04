@@ -71,7 +71,7 @@ public class Tootle.Dialogs.Preferences : Dialog {
 
         });
         grid.attach (cleanNotifications, 1, i++);
-
+        grid.set_margin_bottom(4);
 
         var content = get_content_area () as Box;
         content.pack_start (grid, false, false, 0);
