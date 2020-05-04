@@ -1,7 +1,7 @@
 using Gtk;
 using Granite;
 
-public class Tootle.Views.Profile : Views.Timeline {
+public class Olifant.Views.Profile : Views.Timeline {
 
     const int AVATAR_SIZE = 128;
     protected API.Account account;

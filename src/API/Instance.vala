@@ -1,4 +1,4 @@
-public class Tootle.API.Instance{
+public class Olifant.API.Instance{
 
     public string uri;
     public string email;

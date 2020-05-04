@@ -1,7 +1,7 @@
 using GLib;
 using Soup;
 
-public class Tootle.Notificator : GLib.Object {
+public class Olifant.Notificator : GLib.Object {
 
     private WebsocketConnection? connection;
     private Soup.Message msg;

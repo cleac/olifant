@@ -1,7 +1,7 @@
 using Gdk;
 using GLib;
 
-public class Tootle.Drawing {
+public class Olifant.Drawing {
 
 	public static void draw_rounded_rect (Cairo.Context ctx, double x, double y, double w, double h, double r) {
 		double degr = Math.PI / 180.0;

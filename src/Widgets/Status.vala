@@ -2,7 +2,7 @@ using Gtk;
 using Gdk;
 using Granite;
 
-public class Tootle.Widgets.Status : EventBox {
+public class Olifant.Widgets.Status : EventBox {
 
     public API.Status status;
     public bool is_notification = false;

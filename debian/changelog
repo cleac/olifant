@@ -1,7 +1,13 @@
+olifant (0.2.1-beta1) bionic; urgency=medium
+
+ * Preparations for applying application to Elementary Store
+ * There is a way to sign in even if there is no xdg-open
+ * Fix getting characters limit of instance
+
 tootle (0.2.1-beta) bionic; urgency=medium
 
   * Fixed crash when there is a poll notification
-  * Improved networking a bit 
+  * Improved networking a bit
   * Fork established, including with changing icon slightly
 
  -- Alex Cleac <alex@posteo.net>  Sat, 29 Feb 2020 10:00:41 +0200

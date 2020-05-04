@@ -2,15 +2,15 @@
 <!-- Copyright 2020 Alex Cleac <alexcleac@posteo.net> -->
 <!-- Copyright 2018 bleak_grey <bleakgrey@gmail.com> -->
 <component type="desktop">
-  <id>com.github.cleac.tootle</id>
+  <id>com.github.cleac.olifant</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <name>Tootle</name>
+  <name>Olifant</name>
   <summary>Lightning fast client for Mastodon</summary>
-  
+
   <description>
     <p>
-      Tootle is a client for the world’s largest free, open-source, decentralized microblogging network with real-time notifications and support for multiple accounts.
+      Olifant is a client for the world’s largest free, open-source, decentralized microblogging network with real-time notifications and support for multiple accounts.
     </p>
     <p>
       Mastodon is lovingly crafted with power and speed in mind, resulting in a free, independent, and popular alternative to the centralized social networks.
@@ -19,15 +19,15 @@
       Anyone can run a Mastodon server. Each server hosts individual user accounts, the content they produce, and the content to which they are subscribed. Every user can follow each other and share their posts regardless of their server.
     </p>
   </description>
-  
+
   <provides>
-    <binary>com.github.cleac.tootle</binary>
+    <binary>com.github.cleac.olifant</binary>
   </provides>
-  
+
   <developer_name>alexcleac</developer_name>
-  <url type="homepage">https://github.com/cleac/tootle</url>
-  <url type="bugtracker">https://github.com/cleac/tootle/issues</url>
-  
+  <url type="homepage">https://github.com/cleac/olifant</url>
+  <url type="bugtracker">https://github.com/cleac/olifant/issues</url>
+
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
@@ -57,23 +57,31 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-  
+
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/cleac/olifant/master/data/screenshot.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot2.png</image>
+      <image>https://raw.githubusercontent.com/cleac/olifant/master/data/screenshot2.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot3.png</image>
+      <image>https://raw.githubusercontent.com/cleac/olifant/master/data/screenshot3.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot4.png</image>
+      <image>https://raw.githubusercontent.com/cleac/olifant/master/data/screenshot4.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="0.2.1-beta1" date="2020-02-29">
+        <description>
+           <ul>
+              <li>One step further in fork process</li>
+              <li>Implemented way to log in when xdg-open is not available</li>
+          </ul>
+        </description>
+      </release>
     <release version="0.2.1-beta" date="2020-02-29">
         <description>
            <ul>
@@ -119,7 +127,7 @@
         </description>
       </release>
    </releases>
-  
+
    <custom>
      <value key="x-appcenter-color-primary">#F5F8FF</value>
      <value key="x-appcenter-color-primary-text">#413F58</value>

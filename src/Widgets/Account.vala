@@ -1,6 +1,6 @@
 using Gdk;
 
-public class Tootle.Widgets.Account : Widgets.Status {
+public class Olifant.Widgets.Account : Widgets.Status {
 
     public Account (API.Account account) {
         var status = new API.Status (-1);

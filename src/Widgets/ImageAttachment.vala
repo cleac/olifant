@@ -1,7 +1,7 @@
 using Gtk;
 using Gdk;
 
-public class Tootle.Widgets.ImageAttachment : DrawingArea {
+public class Olifant.Widgets.ImageAttachment : DrawingArea {
 
 	public API.Attachment? attachment;
 	private bool editable = false;

@@ -1,7 +1,7 @@
 using GLib;
 using Gee;
 
-public class Tootle.InstanceAccount : Object {
+public class Olifant.InstanceAccount : Object {
 
     public string username {get; set;}
     public string instance {get; set;}

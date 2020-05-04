@@ -1,7 +1,7 @@
 using Gtk;
 using Gdk;
 
-public class Tootle.Views.Timeline : Views.Abstract {
+public class Olifant.Views.Timeline : Views.Abstract {
 
     protected string timeline;
     protected string pars;

@@ -1,4 +1,4 @@
-public class Tootle.API.Account {
+public class Olifant.API.Account {
 
     public abstract signal void updated ();
 

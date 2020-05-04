@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Dialogs.Compose : Dialog {
+public class Olifant.Dialogs.Compose : Dialog {
 
     private static Compose dialog;
 

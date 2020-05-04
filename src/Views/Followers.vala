@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Views.Followers : Views.Timeline {
+public class Olifant.Views.Followers : Views.Timeline {
 
     public Followers (API.Account account) {
         base (account.id.to_string ());

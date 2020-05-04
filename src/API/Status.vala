@@ -1,4 +1,4 @@
-public class Tootle.API.Status {
+public class Olifant.API.Status {
 
     public signal void updated ();
 
