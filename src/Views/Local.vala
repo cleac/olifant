@@ -1,4 +1,4 @@
-public class Tootle.Views.Local : Views.Timeline {
+public class Olifant.Views.Local : Views.Timeline {
 
     public Local () {
         base ("public");

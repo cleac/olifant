@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/me/cleac/tootle/">
+  <gresource prefix="/me/cleac/olifant/">
     <file alias="app.css">app.css</file>
     <file alias="light.css">light.css</file>
     <file alias="dark.css">dark.css</file>

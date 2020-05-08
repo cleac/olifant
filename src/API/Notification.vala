@@ -1,4 +1,4 @@
-public class Tootle.API.Notification {
+public class Olifant.API.Notification {
 
     public int64 id;
     public NotificationType type;

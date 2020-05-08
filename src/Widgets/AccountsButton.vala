@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Widgets.AccountsButton : MenuButton {
+public class Olifant.Widgets.AccountsButton : MenuButton {
 
     const int AVATAR_SIZE = 24;
     Granite.Widgets.Avatar avatar;

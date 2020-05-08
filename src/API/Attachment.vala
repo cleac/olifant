@@ -1,4 +1,4 @@
-public class Tootle.API.Attachment {
+public class Olifant.API.Attachment {
 
     public int64 id;
     public string type;

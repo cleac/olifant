@@ -1,13 +1,10 @@
-# Tootle [fork]
+# Olifant
 
-A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for elementary OS, originally developed by [@bleakgrey](https://github.com/bleakgrey/tootle).
+A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for elementary OS, originally developed by [@bleakgrey](https://github.com/bleakgrey/olifant).
 
-![Tootle Screenshot](https://raw.githubusercontent.com/cleac/tootle/master/data/screenshot.png)
+![Olifant Screenshot](https://raw.githubusercontent.com/cleac/olifant/master/data/screenshot.png)
 
 ## Building and Installation
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cleac.tootle)
-<a href='https://flathub.org/apps/details/com.github.cleac.tootle'><img height='51' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
 
 First of all you'll need some dependencies to build and run the app:
 * meson
@@ -20,10 +17,9 @@ First of all you'll need some dependencies to build and run the app:
 Then run these commands to build and install it:
 
     meson build --prefix=/usr
-    cd build
-    sudo ninja install
-    com.github.cleac.tootle
-    
+    ninja -C build install
+    com.github.cleac.olifant
+
 ## Contributing
 
 If you feel like contributing, you're always welcome to help the project in many ways:
@@ -33,7 +29,9 @@ If you feel like contributing, you're always welcome to help the project in many
 
 ## Credits
 * Original project by [@bleakgrey](https://github.com/bleakgrey)
-* Tootle Logo by [@CallMeFib3r](https://github.com/CallMeFib3r)
+* Olifant Logo by [Han "FanOKnives" Aral](https://github.com/hanaral)
+* Name of forked project by [Kev Quirk](https://fosstodon.org/@kev/)
+* Features coded and bugs fought by [@jcamposz](https://github.com/jcamposz)
 * Medel typeface by Ozan Karakoc
 * French translation by [@Larnicone](https://github.com/Larnicone)
 * Polish translation by [@m4sk1n](https://github.com/m4sk1n)

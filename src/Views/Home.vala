@@ -1,4 +1,4 @@
-public class Tootle.Views.Home : Views.Timeline {
+public class Olifant.Views.Home : Views.Timeline {
 
     public Home () {
         base ("home");

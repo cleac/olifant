@@ -1,10 +1,10 @@
-# zh_CN translation for tootle
+# zh_CN translation for olifant
 # Copyright (C) 2018 gloomy-ghost
 # This file is distributed under the GPL 3.0
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.cleac.tootle\n"
+"Project-Id-Version: com.github.cleac.olifant\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-30 19:17+0300\n"
 "PO-Revision-Date: 2018-10-31 14:47+1300\n"
@@ -17,38 +17,38 @@ msgstr ""
 "X-Generator: Poedit 2.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/com.github.cleac.tootle.desktop.in:4
-#: data/com.github.cleac.tootle.appdata.xml.in:7 src/MainWindow.vala:68
-msgid "Tootle"
-msgstr "Tootle"
+#: data/com.github.cleac.olifant.desktop.in:4
+#: data/com.github.cleac.olifant.appdata.xml.in:7 src/MainWindow.vala:68
+msgid "Olifant"
+msgstr "Olifant"
 
-#: data/com.github.cleac.tootle.desktop.in:5
-#: data/com.github.cleac.tootle.desktop.in:6
+#: data/com.github.cleac.olifant.desktop.in:5
+#: data/com.github.cleac.olifant.desktop.in:6
 msgid "Mastodon Client"
 msgstr "Mastodon 客户端"
 
-#: data/com.github.cleac.tootle.desktop.in:8
-msgid "com.github.cleac.tootle"
-msgstr "com.github.cleac.tootle"
+#: data/com.github.cleac.olifant.desktop.in:8
+msgid "com.github.cleac.olifant"
+msgstr "com.github.cleac.olifant"
 
-#: data/com.github.cleac.tootle.desktop.in:11
+#: data/com.github.cleac.olifant.desktop.in:11
 msgid "toot;mastodon;social;network;post;"
 msgstr "toot;mastodon;社交;网络;发嘟;"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:8
+#: data/com.github.cleac.olifant.appdata.xml.in:8
 msgid "Lightning fast client for Mastodon"
 msgstr "轻量快速的 Mastodon 客户端"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:11
+#: data/com.github.cleac.olifant.appdata.xml.in:11
 msgid ""
-"Tootle is a client for the world’s largest free, open-source, decentralized "
+"Olifant is a client for the world’s largest free, open-source, decentralized "
 "microblogging network with real-time notifications and multiple accounts "
 "support."
 msgstr ""
-"Tootle 是一个社交应用，基于世界上最大的自由、开源、去中心化社交网络，支持实时"
+"Olifant 是一个社交应用，基于世界上最大的自由、开源、去中心化社交网络，支持实时"
 "通知和多帐户登录。"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:14
+#: data/com.github.cleac.olifant.appdata.xml.in:14
 msgid ""
 "Mastodon is lovely crafted with power and speed in mind, resulting in a "
 "free, independent and popular alternative to the centralized social networks."
@@ -56,7 +56,7 @@ msgstr ""
 "Mastodon 以人为本，搭配与生俱来的极致性能，给你一个自由而流行的去中心化社交网"
 "络。"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:17
+#: data/com.github.cleac.olifant.appdata.xml.in:17
 msgid ""
 "Anyone can run a server of Mastodon. Each server hosts individual user "
 "accounts, the content they produce, and the content they are subscribed. "
@@ -66,7 +66,7 @@ msgstr ""
 "任何人都可以运营 Mastodon 的节点，各自负责节点上的用户数据。用户可以互相关"
 "注、分享，而这一切都可以跨节点运作。"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:26
+#: data/com.github.cleac.olifant.appdata.xml.in:26
 msgid "bleak_grey"
 msgstr "bleak_grey"
 

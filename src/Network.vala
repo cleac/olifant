@@ -3,7 +3,7 @@ using GLib;
 using Gdk;
 using Json;
 
-public class Tootle.Network : GLib.Object {
+public class Olifant.Network : GLib.Object {
 
     public const string INJECT_TOKEN = "X-HeyMate-PlsInjectToken4MeThx";
 

@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Widgets.ImageToggleButton : ToggleButton {
+public class Olifant.Widgets.ImageToggleButton : ToggleButton {
 
     public Image icon;
     public IconSize size;

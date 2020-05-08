@@ -1,11 +1,11 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.cleac.tootle package.
+# This file is distributed under the same license as the com.github.cleac.olifant package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.cleac.tootle\n"
+"Project-Id-Version: com.github.cleac.olifant\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-30 19:17+0300\n"
 "PO-Revision-Date: 2018-10-30 22:20+0100\n"
@@ -18,39 +18,39 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/com.github.cleac.tootle.desktop.in:4
-#: data/com.github.cleac.tootle.appdata.xml.in:7 src/MainWindow.vala:68
-msgid "Tootle"
-msgstr "Tootle"
+#: data/com.github.cleac.olifant.desktop.in:4
+#: data/com.github.cleac.olifant.appdata.xml.in:7 src/MainWindow.vala:68
+msgid "Olifant"
+msgstr "Olifant"
 
-#: data/com.github.cleac.tootle.desktop.in:5
-#: data/com.github.cleac.tootle.desktop.in:6
+#: data/com.github.cleac.olifant.desktop.in:5
+#: data/com.github.cleac.olifant.desktop.in:6
 msgid "Mastodon Client"
 msgstr "Mastodon-Client"
 
-#: data/com.github.cleac.tootle.desktop.in:8
-msgid "com.github.cleac.tootle"
-msgstr "com.github.cleac.tootle"
+#: data/com.github.cleac.olifant.desktop.in:8
+msgid "com.github.cleac.olifant"
+msgstr "com.github.cleac.olifant"
 
-#: data/com.github.cleac.tootle.desktop.in:11
+#: data/com.github.cleac.olifant.desktop.in:11
 msgid "toot;mastodon;social;network;post;"
 msgstr "toot;mastodon;social;network;post;"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:8
+#: data/com.github.cleac.olifant.appdata.xml.in:8
 msgid "Lightning fast client for Mastodon"
 msgstr "Blitzschneller Client für Mastodon"
 
-#: data/com.github.cleac.tootle.appdata.xml.in:11
+#: data/com.github.cleac.olifant.appdata.xml.in:11
 msgid ""
-"Tootle is a client for the world’s largest free, open-source, decentralized "
+"Olifant is a client for the world’s largest free, open-source, decentralized "
 "microblogging network with real-time notifications and multiple accounts "
 "support."
 msgstr ""
-"Tootle ist ein Client für das weltgrößte freie, dezentrale, open-source "
+"Olifant ist ein Client für das weltgrößte freie, dezentrale, open-source "
 "Microblogging-Netzwerk mit Echtzeit-Benachrichtigungen und Multi-Account-"
 "Support."
 
-#: data/com.github.cleac.tootle.appdata.xml.in:14
+#: data/com.github.cleac.olifant.appdata.xml.in:14
 msgid ""
 "Mastodon is lovely crafted with power and speed in mind, resulting in a "
 "free, independent and popular alternative to the centralized social networks."
@@ -59,7 +59,7 @@ msgstr ""
 "frei und unabhängig ist und eine populäre Alternative zu zentralisierten "
 "sozialen Netzwerken ist."
 
-#: data/com.github.cleac.tootle.appdata.xml.in:17
+#: data/com.github.cleac.olifant.appdata.xml.in:17
 msgid ""
 "Anyone can run a server of Mastodon. Each server hosts individual user "
 "accounts, the content they produce, and the content they are subscribed. "
@@ -71,7 +71,7 @@ msgstr ""
 "abonniert haben. Jeder Nutzer kann jeden anderen Nutzer folgen und ihre "
 "Posts sehen egal auf welchen Server sie sich befinden."
 
-#: data/com.github.cleac.tootle.appdata.xml.in:26
+#: data/com.github.cleac.olifant.appdata.xml.in:26
 msgid "bleak_grey"
 msgstr "bleak_grey"
 

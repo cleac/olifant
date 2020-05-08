@@ -1,4 +1,4 @@
-public class Tootle.Views.Favorites : Views.Timeline {
+public class Olifant.Views.Favorites : Views.Timeline {
 
     public Favorites () {
         base ("favorites");
