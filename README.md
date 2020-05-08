@@ -29,7 +29,7 @@ If you feel like contributing, you're always welcome to help the project in many
 
 ## Credits
 * Original project by [@bleakgrey](https://github.com/bleakgrey)
-* Olifant Logo by [@hanaral](https://github.com/hanaral)
+* Olifant Logo by [Han "FanOKnives" Aral](https://github.com/hanaral)
 * Name of forked project by [Kev Quirk](https://fosstodon.org/@kev/)
 * Features coded and bugs fought by [@jcamposz](https://github.com/jcamposz)
 * Medel typeface by Ozan Karakoc
