@@ -1,5 +1,3 @@
-# Please note that this repository is dormant and here only for archivation reasons. If you have contributions you aim to perform, please follow the new repository placement: [Olifant](https://github.com/cleac/olifant).
-
 # Olifant
 
 A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for elementary OS, originally developed by [@bleakgrey](https://github.com/bleakgrey/olifant).
