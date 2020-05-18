@@ -1,4 +1,4 @@
-public class Tootle.Views.Hashtag : Views.Timeline {
+public class Olifant.Views.Hashtag : Views.Timeline {
 
     public Hashtag (string hashtag) {
         base ("tag/" + hashtag);

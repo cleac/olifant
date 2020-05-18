@@ -1,6 +1,6 @@
 using GLib;
 
-public class Tootle.API.Relationship : Object {
+public class Olifant.API.Relationship : Object {
 
     public int64 id;
     public bool following;

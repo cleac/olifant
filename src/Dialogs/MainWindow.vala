@@ -1,7 +1,7 @@
 using Gtk;
 using Gdk;
 
-public class Tootle.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
+public class Olifant.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
 
     private Overlay overlay;
     public Granite.Widgets.Toast toast;
@@ -25,7 +25,7 @@ public class Tootle.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
     construct {
 
         var provider = new Gtk.CssProvider ();
-        provider.load_from_resource ("/me/cleac/tootle/app.css");
+        provider.load_from_resource ("/me/cleac/olifant/app.css");
         StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         settings.changed.connect (update_theme);
@@ -73,7 +73,7 @@ public class Tootle.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
         header = new HeaderBar ();
         header.get_style_context ().add_class ("compact");
         header.show_close_button = true;
-        header.title = _("Tootle");
+        header.title = _("Olifant");
         header.custom_title = button_mode;
         header.pack_start (button_back);
         header.pack_start (button_toot);
@@ -106,7 +106,7 @@ public class Tootle.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
 
     public MainWindow (Gtk.Application _app) {
         application = _app;
-        icon_name = "com.github.cleac.tootle";
+        icon_name = "com.github.cleac.olifant";
         resizable = true;
         window_position = WindowPosition.CENTER;
         set_titlebar (header);
@@ -188,7 +188,7 @@ public class Tootle.Dialogs.MainWindow: Gtk.Window, ISavedWindow {
         var provider = new Gtk.CssProvider ();
         var is_dark = settings.dark_theme;
         var theme = is_dark ? "dark" : "light";
-        provider.load_from_resource ("/me/cleac/tootle/%s.css".printf (theme));
+        provider.load_from_resource ("/me/cleac/olifant/%s.css".printf (theme));
         StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = is_dark;
     }

@@ -1,4 +1,4 @@
-public enum Tootle.API.NotificationType {
+public enum Olifant.API.NotificationType {
     MENTION,
     REBLOG,
     REBLOG_REMOTE_USER, // Internal

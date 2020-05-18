@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: tootle
-Source: https://github.com/cleac/tootle
+Upstream-Name: olifant
+Source: https://github.com/cleac/olifant
 
 Files: *
 Copyright: 2018 bleak_grey <bleakgrey@gmail.com>

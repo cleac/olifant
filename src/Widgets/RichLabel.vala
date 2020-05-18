@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Widgets.RichLabel : Label {
+public class Olifant.Widgets.RichLabel : Label {
 
     public weak API.Mention[]? mentions;
 

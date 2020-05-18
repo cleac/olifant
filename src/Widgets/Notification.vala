@@ -1,7 +1,7 @@
 using Gtk;
 using Granite;
 
-public class Tootle.Widgets.Notification : Grid {
+public class Olifant.Widgets.Notification : Grid {
 
     private API.Notification notification;
 

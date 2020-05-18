@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Widgets.AlignedLabel : Label {
+public class Olifant.Widgets.AlignedLabel : Label {
 
     public AlignedLabel (string text) {
         label = text;

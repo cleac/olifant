@@ -1,7 +1,7 @@
 using Gtk;
 using Gee;
 
-public class Tootle.Dialogs.WatchlistEditor : Dialog {
+public class Olifant.Dialogs.WatchlistEditor : Dialog {
 
     private static WatchlistEditor dialog;
 

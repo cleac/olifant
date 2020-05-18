@@ -1,6 +1,6 @@
 using Gtk;
 
-public interface Tootle.Dialogs.ISavedWindow : Window {
+public interface Olifant.Dialogs.ISavedWindow : Window {
 
 	public void restore_state () {
 		var settings = new Settings ();

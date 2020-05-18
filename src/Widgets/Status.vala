@@ -2,7 +2,7 @@ using Gtk;
 using Gdk;
 using Granite;
 
-public class Tootle.Widgets.Status : EventBox {
+public class Olifant.Widgets.Status : EventBox {
 
     public API.Status status;
     public bool is_notification = false;
@@ -206,7 +206,9 @@ public class Tootle.Widgets.Status : EventBox {
     public void rebind () {
         var formal = status.get_formal ();
 
-        title_user.set_label ("<b>%s</b>".printf ((formal.account.display_name)));
+        title_user.set_label (
+            "<b>%s</b>".printf ((formal.account.display_name.replace ("&", "&amp;")))
+        );
         title_acct.label = "@" + formal.account.acct;
         content_label.set_label (formal.content);
         content_label.mentions = formal.mentions;

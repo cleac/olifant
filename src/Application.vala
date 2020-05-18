@@ -1,7 +1,7 @@
 using Gtk;
 using Granite;
 
-namespace Tootle {
+namespace Olifant {
 
     public static Application app;
     public static Dialogs.MainWindow? window;
@@ -35,9 +35,9 @@ namespace Tootle {
         };
 
         construct {
-            application_id = "com.github.cleac.tootle";
+            application_id = "com.github.cleac.olifant";
             flags = ApplicationFlags.FLAGS_NONE;
-            program_name = "Tootle";
+            program_name = "Olifant";
             build_version = "0.2.1";
         }
 

@@ -1,7 +1,7 @@
 using Gtk;
 using GLib;
 
-public class Tootle.Widgets.AttachmentGrid : Grid {
+public class Olifant.Widgets.AttachmentGrid : Grid {
 
 	private int counter = 0;
 	private bool allow_editing;

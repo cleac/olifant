@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=Application
-Name=Tootle [Fork]
+Name=Olifant
 Comment=Mastodon Client
 GenericName=Mastodon Client
-Exec=com.github.cleac.tootle
-Icon=com.github.cleac.tootle
+Exec=com.github.cleac.olifant
+Icon=com.github.cleac.olifant
 Terminal=false
 Categories=GNOME;GTK;Network;
 Keywords=toot;mastodon;social;network;post;
-X-GNOME-Gettext-Domain=com.github.cleac.tootle
+X-GNOME-Gettext-Domain=com.github.cleac.olifant
 X-GNOME-UsesNotifications=true

@@ -1,4 +1,4 @@
-public class Tootle.Desktop {
+public class Olifant.Desktop {
 
     // Open URI in the user's default application associated with it
     public static bool open_uri (string uri) {

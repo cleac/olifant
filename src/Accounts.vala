@@ -1,6 +1,6 @@
 using GLib;
 
-public class Tootle.Accounts : Object {
+public class Olifant.Accounts : Object {
 
     private string dir_path;
     private string file_path;

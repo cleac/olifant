@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Views.ExpandedStatus : Views.Abstract {
+public class Olifant.Views.ExpandedStatus : Views.Abstract {
 
     private API.Status root_status;
     private bool last_status_was_root = false;

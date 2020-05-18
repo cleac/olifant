@@ -1,4 +1,4 @@
-public class Tootle.Html {
+public class Olifant.Html {
 
     public static string remove_tags (string content) {
         var all_tags = new Regex("<(.|\n)*?>", RegexCompileFlags.CASELESS);
