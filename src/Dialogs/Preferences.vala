@@ -64,7 +64,7 @@ public class Olifant.Dialogs.Preferences : Dialog {
             network.inject (msg, Network.INJECT_TOKEN);
             network.queue (msg, (sess, mess) => {
                 //update notifications tab
-                Tootle.window.notifications.on_refresh();
+                Olifant.window.notifications.on_refresh();
             }, (status, reason) => {
                 open_link_fallback (url, reason);
             });
