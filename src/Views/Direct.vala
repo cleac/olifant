@@ -1,4 +1,4 @@
-public class Tootle.Views.Direct : Views.Timeline {
+public class Olifant.Views.Direct : Views.Timeline {
 
     public Direct () {
         base ("direct");

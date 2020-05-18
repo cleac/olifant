@@ -1,4 +1,4 @@
-public class Tootle.Settings : Granite.Services.Settings {
+public class Olifant.Settings : Granite.Services.Settings {
 
     public int current_account { get; set; }
     public bool notifications { get; set; }
@@ -18,7 +18,7 @@ public class Tootle.Settings : Granite.Services.Settings {
     public int window_h { get; set; }
 
     public Settings () {
-        base ("com.github.cleac.tootle");
+        base ("com.github.cleac.olifant");
     }
 
 }

@@ -1,7 +1,7 @@
 using GLib;
 using Gee;
 
-public class Tootle.Watchlist : Object {
+public class Olifant.Watchlist : Object {
 
     public ArrayList<string> users = new ArrayList<string> ();
     public ArrayList<string> hashtags = new ArrayList<string> ();

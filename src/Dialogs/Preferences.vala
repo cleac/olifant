@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Dialogs.Preferences : Dialog {
+public class Olifant.Dialogs.Preferences : Dialog {
 
     private static Preferences dialog;
 

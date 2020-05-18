@@ -1,4 +1,4 @@
-public class Tootle.Views.Following : Views.Followers {
+public class Olifant.Views.Following : Views.Followers {
 
     public Following (API.Account account) {
         base (account);

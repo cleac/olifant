@@ -29,7 +29,7 @@ private struct CachedImage {
 
 public delegate void PixbufCallback (Gdk.Pixbuf pb);
 
-public class Tootle.ImageCache : GLib.Object {
+public class Olifant.ImageCache : GLib.Object {
 
     private GLib.HashTable<CachedImage?, Soup.Message> in_progress;
     private GLib.HashTable<CachedImage?, Gdk.Pixbuf> pixbufs;

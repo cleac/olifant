@@ -1,5 +1,5 @@
-data/com.github.cleac.tootle.desktop.in
-data/com.github.cleac.tootle.appdata.xml.in
+data/com.github.cleac.olifant.desktop.in
+data/com.github.cleac.olifant.appdata.xml.in
 src/Drawing.vala
 src/Dialogs/Preferences.vala
 src/Dialogs/MainWindow.vala

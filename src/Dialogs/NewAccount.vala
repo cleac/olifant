@@ -1,6 +1,6 @@
 using Gtk;
 
-public class Tootle.Dialogs.NewAccount : Dialog {
+public class Olifant.Dialogs.NewAccount : Dialog {
 
     private static NewAccount dialog;
 
@@ -30,7 +30,7 @@ public class Tootle.Dialogs.NewAccount : Dialog {
         title = _("New Account");
         transient_for = window;
 
-        logo = new Image.from_resource ("/me/cleac/tootle/logo128");
+        logo = new Image.from_resource ("/me/cleac/olifant/logo128");
         logo.halign = Align.CENTER;
         logo.hexpand = true;
         logo.margin_bottom = 24;
@@ -133,7 +133,7 @@ public class Tootle.Dialogs.NewAccount : Dialog {
     }
 
     private void request_client_tokens (){
-        var pars = "?client_name=Tootle%20Fork";
+        var pars = "?client_name=Olifant";
         pars += "&redirect_uris=urn:ietf:wg:oauth:2.0:oob";
         pars += "&website=https://github.com/cleac/tootle";
         pars += "&scopes=read%20write%20follow";

@@ -1,4 +1,4 @@
-public class Tootle.Views.Federated : Views.Timeline {
+public class Olifant.Views.Federated : Views.Timeline {
 
     public Federated () {
         base ("public");

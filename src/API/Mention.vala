@@ -1,4 +1,4 @@
-public class Tootle.API.Mention : GLib.Object {
+public class Olifant.API.Mention : GLib.Object {
 
     public int64 id;
     public string username;

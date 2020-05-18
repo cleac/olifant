@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-	<schema path="/me/cleac/tootle/" id="com.github.cleac.tootle" gettext-domain="com.github.cleac.tootle">
+	<schema path="/me/cleac/olifant/" id="com.github.cleac.olifant" gettext-domain="com.github.cleac.olifant">
 		<key name="current-account" type="i">
 			<default>0</default>
 			<summary>Current Account</summary>
