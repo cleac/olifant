@@ -31,6 +31,8 @@ public class Olifant.Dialogs.Compose : Dialog {
         replying_to = _replying_to;
         redrafting = _redrafting;
 
+        if (accounts.formal.preferences != null && accounts.formal.preferences.posting_default_visibility != "public")
+            visibility_opt = API.StatusVisibility.from_string (accounts.formal.preferences.posting_default_visibility);
         if (replying_to != null)
             visibility_opt = replying_to.visibility;
         if (redrafting != null)

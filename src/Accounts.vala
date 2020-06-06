@@ -39,6 +39,18 @@ public class Olifant.Accounts : Object {
                 currentInstance = API.Instance.parse (root);
             },
             network.on_show_error);
+
+        if (accounts.formal.preferences == null) {
+            info ("Getting preferences from %s", accounts.formal.instance);
+            msg = new Soup.Message ("GET", "%s/api/v1/preferences".printf (accounts.formal.instance));
+            network.inject (msg, Network.INJECT_TOKEN);
+            network.queue (msg, (sess, mess) => {
+                var root = network.parse (mess);
+                accounts.formal.preferences = API.Preferences.parse (root);
+                accounts.save ();
+            },
+            network.on_show_error);
+        }
     }
 
     public void add (InstanceAccount account) {

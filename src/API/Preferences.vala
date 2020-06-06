@@ -4,13 +4,13 @@
 
 public class Olifant.API.Preferences {
 
-    public string posting_default_visibility;
-    public bool posting_default_sensitive;
-    public string? posting_default_language;
-    public string reading_expand_media;
-    public bool reading_expand_spoilers;
+    public string posting_default_visibility {get; set;}
+    public bool posting_default_sensitive {get; set;}
+    public string? posting_default_language {get; set; default = null;}
+    public string reading_expand_media {get; set;}
+    public bool reading_expand_spoilers {get; set;}
 
-    public Preferences () {/* TODO? */}
+    public Preferences () {}
 
     public static Preferences parse (Json.Object obj) {
         var prefs = new Preferences ();
@@ -48,14 +48,3 @@ public class Olifant.API.Preferences {
         return builder.get_root ();
     }
 }
-
-/* TODO: put this where it goes
-var msg = new Soup.Message ("GET", "%s/api/v1/preferences".printf (accounts.formal.instance));
-network.inject (msg, Network.INJECT_TOKEN);
-network.queue (msg, (sess, mess) => {
-    var root = network.parse (mess);
-    preferences = API.Preferences.parse (root);
-}, (status, reason) => {
-    network.on_show_error (status, reason);
-});
-*/

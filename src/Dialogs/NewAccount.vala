@@ -20,7 +20,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
     private string? token;
     private string? username;
     private int64? instance_status_char_limit;
-    private string? posting_default_visibility;
+    private API.Preferences? preferences;
 
     private const int64 DEFAULT_INSTANCE_STATUS_CHAR_LIMIT = 500;
 
@@ -200,18 +200,18 @@ public class Olifant.Dialogs.NewAccount : Dialog {
         network.queue (message, (sess, msg) => {
                 var root = network.parse (msg);
                 username = root.get_string_member ("username");
-                get_posting_default_visibility();
+                retrieve_preferences();
             }, (status, reason) => {
                 network.on_show_error (status, reason);
             });
     }
 
-    private void get_posting_default_visibility () {
-        var msg = new Soup.Message ("GET", "%s/api/v1/preferences".printf (accounts.formal.instance));
-        network.inject (msg, Network.INJECT_TOKEN);
-        network.queue (msg, (sess, mess) => {
-            var root = network.parse (mess);
-            posting_default_visibility = root.get_string_member ("posting:default:visibility");
+    private void retrieve_preferences () {
+        var message = new Soup.Message ("GET", "%s/api/v1/preferences".printf (instance));
+        message.request_headers.append ("Authorization", "Bearer " + token);
+        network.queue (message, (sess, msg) => {
+            var root = network.parse (msg);
+            preferences = API.Preferences.parse (root);
             add_account ();
             window.show ();
             window.present ();
@@ -229,7 +229,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
         account.client_secret = client_secret;
         account.token = token;
         account.status_char_limit = instance_status_char_limit;
-        account.posting_default_visibility = posting_default_visibility;
+        account.preferences = preferences;
         accounts.add (account);
         app.activate ();
     }
