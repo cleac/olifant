@@ -32,6 +32,7 @@ executable(
     'src/API/Account.vala',
     'src/API/Relationship.vala',
     'src/API/Mention.vala',
+    'src/API/Preferences.vala',
     'src/API/Tag.vala',
     'src/API/Status.vala',
     'src/API/StatusVisibility.vala',

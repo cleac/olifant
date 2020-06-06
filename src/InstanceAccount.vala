@@ -8,6 +8,7 @@ public class Olifant.InstanceAccount : Object {
     public string client_id {get; set;}
     public string client_secret {get; set;}
     public string token {get; set;}
+    public string? posting_default_visibility {get; set;}
     public int64? status_char_limit {get; set;}
 
     public int64 last_seen_notification {get; set; default = 0;}
