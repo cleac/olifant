@@ -189,7 +189,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
                 var root = network.parse (msg);
                 token = root.get_string_member ("access_token");
 
-                info ("Got access token "+token);
+                info ("Got access token ");
                 get_username ();
                 second_click=false;
         }, (status, reason) => {
