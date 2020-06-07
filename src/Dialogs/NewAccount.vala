@@ -20,6 +20,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
     private string? token;
     private string? username;
     private int64? instance_status_char_limit;
+    private bool second_click;
 
     private const int64 DEFAULT_INSTANCE_STATUS_CHAR_LIMIT = 500;
 
@@ -27,6 +28,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
         border_width = 6;
         deletable = true;
         resizable = false;
+        second_click=false;
         title = _("New Account");
         transient_for = window;
 
@@ -104,15 +106,15 @@ public class Olifant.Dialogs.NewAccount : Dialog {
 
         request_instance_status_charlimit();
 
-        if (client_id == null || client_secret == null) {
+        if (!second_click){
             request_client_tokens ();
-            return;
         }
-
-        if (code == "")
-            app.error (_("Error"), _("Please paste valid instance authorization code"));
-        else
-            try_auth (code);
+        else{
+            if (code == "")
+                app.error (_("Error"), _("Please paste valid instance authorization code"));
+            else
+                try_auth (code);
+        }
     }
 
     private void request_instance_status_charlimit () {
@@ -155,6 +157,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
             code_entry.show ();
             url_hint.show ();
             url_hint.set_markup ("Browser did not open? Try <a href=\"%s\">link</a>".printf (GLib.Markup.escape_text (generate_auth_url ())));
+            second_click=true;
         }, (status, reason) => {
             network.on_show_error (status, reason);
         });
@@ -186,8 +189,9 @@ public class Olifant.Dialogs.NewAccount : Dialog {
                 var root = network.parse (msg);
                 token = root.get_string_member ("access_token");
 
-                info ("Got access token");
+                info ("Got access token "+token);
                 get_username ();
+                second_click=false;
         }, (status, reason) => {
             network.on_show_error (status, reason);
         });

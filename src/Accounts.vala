@@ -55,8 +55,12 @@ public class Olifant.Accounts : Object {
         account.close_notificator ();
 
         saved_accounts.remove_index (i);
-        if (saved_accounts.length < 1)
+        if (saved_accounts.length < 1){
+            formal=null;
+            current=null;
+            currentInstance=null;
             switched (null);
+        }
         else {
             var id = settings.current_account - 1;
             if (id > saved_accounts.length - 1)
@@ -69,7 +73,8 @@ public class Olifant.Accounts : Object {
         updated (saved_accounts);
 
         if (is_empty ()) {
-            window.destroy ();
+            window.destroy ();           
+            window=null;
             Dialogs.NewAccount.open ();
         }
     }
