@@ -102,9 +102,33 @@ public class Olifant.Views.Timeline : Views.Abstract {
         if (page_next != null)
             return page_next;
 
-        var url = "%s/api/v1/timelines/%s?limit=%i".printf (accounts.formal.instance, this.timeline, this.limit);
-        url += this.pars;
+        var url="";
+        if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
+            url = "%s/api/v1/notifications?exclude_types[]=favourite&exclude_types[]=reblog".printf (accounts.formal.instance);
+            url += "&exclude_types[]=follow&exclude_types[]=poll&limit=%i".printf (this.limit);
+            url += this.pars;
+        }
+        else
+        {
+            url = "%s/api/v1/timelines/%s?limit=%i".printf (accounts.formal.instance, this.timeline, this.limit);
+            url += this.pars;
+        }
         return url;
+    }
+
+    public virtual void process_response (Json.Object object){
+        if (object == null) {
+            return;
+        }
+        if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
+            var nots = API.Notification.parse(object);
+            if (nots.status.visibility==API.StatusVisibility.DIRECT){
+                append(nots.status);
+            }
+        } else{
+            var status = API.Status.parse (object);
+            append (status);
+        }
     }
 
     public virtual void request (){
@@ -117,11 +141,7 @@ public class Olifant.Views.Timeline : Views.Abstract {
         network.inject (msg, Network.INJECT_TOKEN);
         network.queue (msg, (sess, mess) => {
                 network.parse_array (mess).foreach_element ((array, i, node) => {
-                    var object = node.get_object ();
-                    if (object != null) {
-                        var status = API.Status.parse (object);
-                        append (status);
-                    }
+                    process_response(node.get_object ());
                 });
                 get_pages (mess.response_headers.get_one ("Link"));
                 empty_state ();
