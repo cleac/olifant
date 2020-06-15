@@ -3,7 +3,7 @@ using Gdk;
 public class Olifant.Widgets.Account : Widgets.Status {
 
     public Account (API.Account account) {
-        var status = new API.Status (-1);
+        var status = new API.Status ("");
         status.account = account;
         status.url = account.url;
         status.content = "<a href=\"%s\">@%s</a>".printf (account.url, account.acct);
