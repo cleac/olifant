@@ -56,8 +56,10 @@ public class Olifant.Dialogs.Preferences : Dialog {
         grid.attach (switch_notifications, 1, i++);
         grid.attach (new SettingsLabel (_("Always receive notifications:")), 0, i);
         grid.attach (switch_watcher, 1, i++);
-        grid.attach (new SettingsLabel (_("Clear notifications:")), 0, i);
-        var cleanNotifications=new Button.with_label (_("Clear"));
+        var clearNotificationsLabel = new SettingsLabel (_("Clear notifications:"));
+        grid.attach (clearNotificationsLabel, 0, i);
+        var cleanNotifications = new Button.with_label (_("Clear"));
+        cleanNotifications.get_style_context ().add_class(Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         cleanNotifications.clicked.connect (() => {
             var url = "%s/api/v1/notifications/clear".printf (accounts.formal.instance);
             var msg = new Soup.Message ("POST", url);
@@ -69,9 +71,13 @@ public class Olifant.Dialogs.Preferences : Dialog {
                 open_link_fallback (url, reason);
             });
 
+            cleanNotifications.set_label (_("Done!"));
+            cleanNotifications.set_sensitive (false);
+            
         });
         grid.attach (cleanNotifications, 1, i++);
         grid.set_margin_bottom(4);
+        grid.set_margin_right(2);
 
         var content = get_content_area () as Box;
         content.pack_start (grid, false, false, 0);
