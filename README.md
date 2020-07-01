@@ -1,6 +1,6 @@
 # Olifant
 
-A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for elementary OS, originally developed by [@bleakgrey](https://github.com/bleakgrey/olifant).
+A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for elementary OS, originally developed by [@bleakgrey](https://github.com/bleakgrey/tootle).
 
 ![Olifant Screenshot](https://raw.githubusercontent.com/cleac/olifant/master/data/screenshot.png)
 

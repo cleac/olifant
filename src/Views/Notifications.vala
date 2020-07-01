@@ -141,7 +141,9 @@ public class Olifant.Views.Notifications : Views.Abstract {
                 var obj = node.get_object ();
                 if (obj != null){
                     var notification = API.Notification.parse (obj);
-                    append (notification);
+                    if (notification.type != API.NotificationType.FOLLOW_REQUEST) {
+                        append (notification);
+                    }
                 }
             });
         });
