@@ -187,7 +187,15 @@ msgstr ""
 msgid "Always receive notifications:"
 msgstr ""
 
-#: src/Dialogs/Preferences.vala:63 src/Dialogs/WatchlistEditor.vala:162
+#: src/Dialogs/Preferences.vala:59
+msgid "Clear notifications:"
+msgstr ""
+
+#: src/Dialogs/Preferences.vala:60
+msgid "Clear"
+msgstr ""
+
+#: src/Dialogs/Preferences.vala:78 src/Dialogs/WatchlistEditor.vala:162
 msgid "_Close"
 msgstr ""
 
