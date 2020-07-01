@@ -1,3 +1,11 @@
+olifant (0.2.1-beta4) bionic; urgency=medium
+
+ * Stability improvements
+ * Added ability to clear notifications
+ * Fixed duplication of follow requests in notifications
+
+ -- Alex Cleac <alex@posteo.net>  Wed, 01 Jul 2020 21:51:30 +0200
+
 olifant (0.2.1-beta1) bionic; urgency=medium
 
  * Preparations for applying application to Elementary Store
