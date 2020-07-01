@@ -58,7 +58,7 @@ public class Olifant.Widgets.RichLabel : Label {
         if ("@" in url || "tags" in url) {
             var query = Soup.URI.encode (url, null);
             var msg_url="";
-            if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0)
+            if (accounts.currentInstance.is_mastodon_v3 ())
                 msg_url = "%s/api/v2/search?q=%s&resolve=true".printf (accounts.formal.instance, query);
             else
                 msg_url = "%s/api/v1/search?q=%s&resolve=true".printf (accounts.formal.instance, query);
