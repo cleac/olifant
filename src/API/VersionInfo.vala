@@ -11,19 +11,19 @@ public class Olifant.API.VersionInfo {
 
     public static VersionInfo parse(string ver) {
         var info = new VersionInfo ();
-        var parts = ver.split(".");
+        string[] parts = ver.split(".");
 
         if (parts[0] != null)
-            info.major = uint.parse(parts[0]);
+            info.major = parts[0].to_int();
 
         if (parts[1] != null)
-            info.minor = uint.parse(parts[1]);
+            info.minor = parts[1].to_int();
 
-        if (parts[2] != null) 
-            info.patch = uint.parse(parts[2]);
+        if (parts[2] != null)
+            info.patch = parts[2].to_int();
 
         return info;
-    } 
+    }
 
     public string show () {
         return "VersionInfo(major=%u, minor=%u, patch=%u)".printf (major, minor, patch);
