@@ -12,7 +12,7 @@ public class Olifant.InstanceAccount : Object {
 
     public API.Preferences? preferences {get; set; default = null;}
 
-    public int64 last_seen_notification {get; set; default = 0;}
+    public string last_seen_notification {get; set; default = "";}
     public bool has_unread_notifications {get; set; default = false;}
     public ArrayList<API.Notification> cached_notifications {get; set;}
 
@@ -69,7 +69,7 @@ public class Olifant.InstanceAccount : Object {
         builder.set_member_name ("token");
         builder.add_string_value (token);
         builder.set_member_name ("last_seen_notification");
-        builder.add_int_value (last_seen_notification);
+        builder.add_string_value (last_seen_notification);
         builder.set_member_name ("has_unread_notifications");
         builder.add_boolean_value (has_unread_notifications);
         if (status_char_limit != null) {
@@ -103,7 +103,7 @@ public class Olifant.InstanceAccount : Object {
         acc.client_id = obj.get_string_member ("id");
         acc.client_secret = obj.get_string_member ("secret");
         acc.token = obj.get_string_member ("token");
-        acc.last_seen_notification = obj.get_int_member ("last_seen_notification");
+        acc.last_seen_notification = obj.get_string_member ("last_seen_notification");
         acc.has_unread_notifications = obj.get_boolean_member ("has_unread_notifications");
         if (obj.has_member ("status_char_limit")) {
             acc.status_char_limit = obj.get_int_member ("status_char_limit");
@@ -146,7 +146,7 @@ public class Olifant.InstanceAccount : Object {
         }
     }
 
-    private void status_removed (int64 id) {
+    private void status_removed (string id) {
         if (is_current ())
             network.status_removed (id);
     }
@@ -158,7 +158,7 @@ public class Olifant.InstanceAccount : Object {
         watchlist.users.@foreach (item => {
         	var acct = status.account.acct;
             if (item == acct || item == "@" + acct) {
-                var obj = new API.Notification (-1);
+                var obj = new API.Notification ("");
                 obj.type = API.NotificationType.WATCHLIST;
                 obj.account = status.account;
                 obj.status = status;

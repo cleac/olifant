@@ -63,7 +63,7 @@ public class Olifant.Widgets.ImageAttachment : DrawingArea {
                 editable = true;
                 invalidate ();
                 network.load_pixbuf (attachment.preview_url, on_ready);
-                info ("Uploaded media: %lld", attachment.id);
+                info ("Uploaded media: %s", attachment.id);
             });
         }
         catch (Error e) {

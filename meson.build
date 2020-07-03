@@ -40,6 +40,7 @@ executable(
     'src/API/NotificationType.vala',
     'src/API/Attachment.vala',
     'src/API/Instance.vala',
+    'src/API/VersionInfo.vala',
     'src/Widgets/AlignedLabel.vala',
     'src/Widgets/RichLabel.vala',
     'src/Widgets/ImageToggleButton.vala',

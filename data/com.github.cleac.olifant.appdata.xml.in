@@ -74,6 +74,15 @@
   </screenshots>
 
   <releases>
+    <release version="0.2.1-beta4" date="2020-07-01">
+        <description>
+           <ul> 
+             <li>Stability improvements</li>
+              <li>Added ability to clear notifications</li>
+              <li>Fixed duplication of follow requests in notifications</li>
+          </ul>
+        </description>
+      </release>
     <release version="0.2.1-beta1" date="2020-02-29">
         <description>
            <ul>
