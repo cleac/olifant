@@ -14,5 +14,5 @@ jobs:
     - uses: actions/checkout@v2.3.1
     - name: Setup environment
       run: |
-        apt update && \
-        apt install meson valac-bin libgtk3-dev libsoup2.4-dev libgranite-dev libjson-glib-dev -y;
+        sudo apt-get update && \
+        sudo apt-get install meson valac-bin libgtk3-dev libsoup2.4-dev libgranite-dev libjson-glib-dev -y;
