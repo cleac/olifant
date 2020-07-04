@@ -15,4 +15,4 @@ jobs:
     - name: Setup environment
       run: |
         sudo apt-get update && \
-        sudo apt-get install meson valac-bin libgtk3-dev libsoup2.4-dev libgranite-dev libjson-glib-dev -y;
+        sudo apt-get install meson valac libgtk-3-dev libsoup2.4-dev libgranite-dev libjson-glib-dev -y;
