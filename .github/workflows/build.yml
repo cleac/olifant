@@ -15,6 +15,4 @@ jobs:
     - uses: actions/github-script@v2.0.0
       name: Setup environment
       with:
-        script: |
-          apt update && \
-          apt install meson valac-bin libgtk3-dev libsoup2.4-dev libgranite-dev libjson-glib-dev -y;
+        script:  apt update; apt install meson valac-bin libgtk3-dev libsoup2.4-dev libgranite-dev libjson-glib-dev -y;
