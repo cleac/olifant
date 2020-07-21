@@ -103,7 +103,7 @@ public class Olifant.Views.Timeline : Views.Abstract {
             return page_next;
 
         var url="";
-        if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
+        if (accounts.currentInstance.is_mastodon_v3 () && this.timeline == "direct") {
             url = "%s/api/v1/notifications?exclude_types[]=favourite&exclude_types[]=reblog".printf (accounts.formal.instance);
             url += "&exclude_types[]=follow&exclude_types[]=poll&limit=%i".printf (this.limit);
             url += this.pars;
@@ -120,9 +120,9 @@ public class Olifant.Views.Timeline : Views.Abstract {
         if (object == null) {
             return;
         }
-        if(accounts.currentInstance.version.ascii_casecmp ("3.0.0")>=0 && this.timeline=="direct"){
+        if (accounts.currentInstance.is_mastodon_v3 () && this.timeline == "direct"){
             var nots = API.Notification.parse(object);
-            if (nots.status.visibility==API.StatusVisibility.DIRECT){
+            if (nots.status != null && nots.status.visibility==API.StatusVisibility.DIRECT) {
                 append(nots.status);
             }
         } else{
