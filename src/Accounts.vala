@@ -94,11 +94,11 @@ public class Olifant.Accounts : Object {
             // specified in constructor, value gets deconstructed as long
             // as it leaves load_single_instance function
             instance_data.add (null);
-            load_single_instance (curId++);
+            load_single_instance.begin (curId++);
         }
     }
 
-    protected void load_single_instance(int current_id) {
+    protected async void load_single_instance(int current_id) {
         var cur_acc = this.saved_accounts.@get (current_id);
         var cur_instance = cur_acc.instance;
         info ("Getting information for %s for #%i", cur_instance, current_id);
