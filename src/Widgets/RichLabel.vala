@@ -55,6 +55,13 @@ public class Olifant.Widgets.RichLabel : Label {
             return true;
         }
 
+        if ("/tag/" in url) {
+            var encoded = url.split("/tag/")[1];
+            var hashtag = Soup.URI.decode (encoded);
+            window.open_view (new Views.Hashtag (hashtag));
+            return true;
+        }
+
         if ("@" in url || "tags" in url) {
             var query = Soup.URI.encode (url, null);
             var msg_url="";
