@@ -103,7 +103,7 @@ public class Olifant.Accounts : Object {
         var cur_instance = cur_acc.instance;
         info ("Getting information for %s for #%i", cur_instance, current_id);
         var instMsg = new Soup.Message ("GET", "%s/api/v1/instance".printf (cur_instance));
-        network.queue (instMsg, (sess, mess) => {
+        network.queue_noauth (instMsg, (sess, mess) => {
                 var root = network.parse (mess);
                 var instance = API.Instance.parse (root);
                 instance_data.@set (current_id, instance);
