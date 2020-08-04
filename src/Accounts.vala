@@ -90,11 +90,11 @@ public class Olifant.Accounts : Object {
         info ("Reloading instances info");
         instance_data = new GenericArray<API.Instance?> ();
         for (var curId = 0; curId < saved_accounts.length; curId++) {
-            // Kind of a dirty hack, if no value added, but if array size 
+            // Kind of a dirty hack, if no value added, but if array size
             // specified in constructor, value gets deconstructed as long
             // as it leaves load_single_instance function
             instance_data.add (null);
-            load_single_instance.begin (curId++);
+            load_single_instance.begin (curId);
         }
     }
 
