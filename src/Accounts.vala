@@ -55,7 +55,7 @@ public class Olifant.Accounts : Object {
         if (saved_accounts.length < 1){
             formal=null;
             current=null;
-            currentInstance=null;
+            //currentInstance=null;
             switched (null);
         }
         else {
