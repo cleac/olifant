@@ -142,7 +142,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
 
         grid.sensitive = false;
         var message = new Soup.Message ("POST", "%s/api/v1/apps%s".printf (instance, pars));
-        network.queue (message, (sess, msg) => {
+        network.queue_noauth (message, (sess, msg) => {
             grid.sensitive = true;
 
             var root = network.parse (msg);
@@ -184,12 +184,14 @@ public class Olifant.Dialogs.NewAccount : Dialog {
         pars += "&grant_type=authorization_code";
         pars += "&code=" + code;
 
+        info ("Querying access token for %s".printf (instance));
         var message = new Soup.Message ("POST", "%s/oauth/token%s".printf (instance, pars));
-        network.queue (message, (sess, msg) => {
+        network.queue_noauth (message, (sess, msg) => {
                 var root = network.parse (msg);
                 token = root.get_string_member ("access_token");
 
-                info ("Got access token ");
+
+                info ("Got access token for %s".printf (instance));
                 get_username ();
                 second_click=false;
         }, (status, reason) => {
@@ -200,7 +202,7 @@ public class Olifant.Dialogs.NewAccount : Dialog {
     private void get_username () {
         var message = new Soup.Message("GET", "%s/api/v1/accounts/verify_credentials".printf (instance));
         message.request_headers.append ("Authorization", "Bearer " + token);
-        network.queue (message, (sess, msg) => {
+        network.queue_noauth (message, (sess, msg) => {
                 var root = network.parse (msg);
                 username = root.get_string_member ("username");
                 add_account ();
