@@ -3,7 +3,7 @@ using Gdk;
 
 public class Olifant.Views.Notifications : Views.Abstract {
 
-    private int64 last_id = 0;
+    private string last_id = "";
     private bool force_dot = false;
 
     public Notifications () {
@@ -141,7 +141,9 @@ public class Olifant.Views.Notifications : Views.Abstract {
                 var obj = node.get_object ();
                 if (obj != null){
                     var notification = API.Notification.parse (obj);
-                    append (notification);
+                    if (notification.type != API.NotificationType.FOLLOW_REQUEST) {
+                        append (notification);
+                    }
                 }
             });
         });

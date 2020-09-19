@@ -9,9 +9,12 @@ public class Olifant.Accounts : Object {
     public signal void updated (GenericArray<InstanceAccount> accounts);
 
     public GenericArray<InstanceAccount> saved_accounts = new GenericArray<InstanceAccount> ();
-    public InstanceAccount? formal {get; set;}
-    public API.Account? current {get; set;}
-    public API.Instance? currentInstance {get; set;}
+    public GenericArray<API.Instance?> instance_data = new GenericArray<API.Instance> ();
+    public InstanceAccount? formal {get; private set;}
+    public API.Account? current {get; private set;}
+    public API.Instance? currentInstance {
+        get { return instance_data.@get (settings.current_account); }
+    }
 
     public Accounts () {
         dir_path = "%s/%s".printf (GLib.Environment.get_user_config_dir (), app.application_id);
@@ -22,6 +25,7 @@ public class Olifant.Accounts : Object {
         info ("Switching to #%i", id);
         settings.current_account = id;
         formal = saved_accounts.@get (id);
+
         var msg = new Soup.Message ("GET", "%s/api/v1/accounts/verify_credentials".printf (accounts.formal.instance));
         network.inject (msg, Network.INJECT_TOKEN);
         network.queue (msg, (sess, mess) => {
@@ -31,20 +35,13 @@ public class Olifant.Accounts : Object {
                 updated (saved_accounts);
             },
             network.on_show_error);
-
-        info ("Getting information from %s", accounts.formal.instance);
-        msg = new Soup.Message ("GET", "%s/api/v1/instance".printf (accounts.formal.instance));
-        network.queue (msg, (sess, mess) => {
-                var root = network.parse (mess);
-                currentInstance = API.Instance.parse (root);
-            },
-            network.on_show_error);
     }
 
     public void add (InstanceAccount account) {
         info ("Adding account for %s at %s", account.username, account.instance);
         saved_accounts.add (account);
         save ();
+        load_instances_info (saved_accounts);
         updated (saved_accounts);
         switch_account (saved_accounts.length - 1);
         account.start_notificator ();
@@ -66,6 +63,7 @@ public class Olifant.Accounts : Object {
             switch_account (id);
         }
         save ();
+        load_instances_info (saved_accounts);
         updated (saved_accounts);
 
         if (is_empty ()) {
@@ -86,6 +84,32 @@ public class Olifant.Accounts : Object {
             Dialogs.NewAccount.open ();
         else
             switch_account (settings.current_account);
+    }
+
+    protected void load_instances_info (GenericArray<InstanceAccount> saved_accounts) {
+        info ("Reloading instances info");
+        instance_data = new GenericArray<API.Instance?> ();
+        for (var curId = 0; curId < saved_accounts.length; curId++) {
+            // Kind of a dirty hack, if no value added, but if array size
+            // specified in constructor, value gets deconstructed as long
+            // as it leaves load_single_instance function
+            instance_data.add (null);
+            load_single_instance.begin (curId);
+        }
+    }
+
+    protected async void load_single_instance(int current_id) {
+        var cur_acc = this.saved_accounts.@get (current_id);
+        var cur_instance = cur_acc.instance;
+        info ("Getting information for %s for #%i", cur_instance, current_id);
+        var instMsg = new Soup.Message ("GET", "%s/api/v1/instance".printf (cur_instance));
+        network.queue_noauth (instMsg, (sess, mess) => {
+                var root = network.parse (mess);
+                var instance = API.Instance.parse (root);
+                instance_data.@set (current_id, instance);
+                info ("DONE: Getting information of %s for #%i", cur_instance, current_id);
+            },
+            network.on_show_error);
     }
 
     public void save (bool overwrite = true) {
@@ -143,6 +167,7 @@ public class Olifant.Accounts : Object {
                 }
             });
             debug ("Loaded %i saved accounts", saved_accounts.length);
+            load_instances_info (saved_accounts);
             updated (saved_accounts);
         }
         catch (GLib.Error e){

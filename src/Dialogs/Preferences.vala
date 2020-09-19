@@ -57,6 +57,29 @@ public class Olifant.Dialogs.Preferences : Dialog {
         grid.attach (new SettingsLabel (_("Always receive notifications:")), 0, i);
         grid.attach (switch_watcher, 1, i++);
 
+        var clearNotificationsLabel = new SettingsLabel (_("Clear notifications:"));
+        grid.attach (clearNotificationsLabel, 0, i);
+        var cleanNotifications = new Button.with_label (_("Clear"));
+        cleanNotifications.get_style_context ().add_class(Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        cleanNotifications.clicked.connect (() => {
+            var url = "%s/api/v1/notifications/clear".printf (accounts.formal.instance);
+            var msg = new Soup.Message ("POST", url);
+            network.inject (msg, Network.INJECT_TOKEN);
+            network.queue (msg, (sess, mess) => {
+                //update notifications tab
+                Olifant.window.notifications.on_refresh();
+            }, (status, reason) => {
+                open_link_fallback (url, reason);
+            });
+
+            cleanNotifications.set_label (_("Done!"));
+            cleanNotifications.set_sensitive (false);
+            
+        });
+        grid.attach (cleanNotifications, 1, i++);
+        grid.set_margin_bottom(4);
+        grid.set_margin_right(2);
+
         var content = get_content_area () as Box;
         content.pack_start (grid, false, false, 0);
 
@@ -90,6 +113,21 @@ public class Olifant.Dialogs.Preferences : Dialog {
             margin_bottom = 6;
             settings.schema.bind (setting, this, "active", SettingsBindFlags.DEFAULT);
         }
+    }
+    public bool open_link_fallback (string url, string reason) {
+        warning ("Can't resolve url: " + url);
+        warning ("Reason: " + reason);
+
+        var toast = window.toast;
+        toast.title = reason;
+        toast.set_default_action (_("Open in Browser"));
+        ulong signal_id = 0;
+        signal_id = toast.default_action.connect (() => {
+            Desktop.open_uri (url);
+            toast.disconnect (signal_id);
+        });
+        toast.send_notification ();
+        return true;
     }
 
 }
