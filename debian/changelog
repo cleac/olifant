@@ -1,3 +1,12 @@
+olifant (0.2.1-beta7) bionic; urgency=medium
+  
+ * Fixed loading of accounts, whenever you are signed in into more than one at once
+ * Changed the way HTML tags were dropped, now more posts will be able to be displayed non-empty
+ * Implemented correct tags parsing of statuses that came from Pleroma
+ * Updated visual icons of empty state and application itself (kudos to @hanaral)
+ * Dropped authenticated queries at places, where they are not needed
+ * Improved loading of images, that caused crashes sometimes
+
 olifant (0.2.1-beta4) bionic; urgency=medium
 
  * Stability improvements
