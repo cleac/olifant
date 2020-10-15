@@ -1,3 +1,10 @@
+# This project is not under maintenance
+
+I am sorry to inform you, but for now my focuses have shifted and I am no longer able to maintain this project. If you want to maintain the project, please contact me in an issue. I can transfer everything you need to make sure this project is running.
+
+----
+
+
 # Olifant
 
 A simple [Mastodon](https://github.com/tootsuite/mastodon) client designed for elementary OS, originally developed by [@bleakgrey](https://github.com/bleakgrey/tootle).
