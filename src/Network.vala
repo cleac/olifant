@@ -61,7 +61,8 @@ public class Olifant.Network : GLib.Object {
         if (headers.get_one (INJECT_TOKEN) != null) {
             headers.remove (INJECT_TOKEN);
         }
-        if (formal != null) {
+        if (formal != null && headers.get_one("Authorization")==null) {
+            info ("Got access token "+formal.token);
             headers.append ("Authorization", "Bearer " + formal.token);
         }
     }
